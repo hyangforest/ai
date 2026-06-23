@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "name": "README & Steering 자동 업데이트",
+  "description": "훅을 실행할 때마다 프로젝트에 포함한 README.md 파일과 .kiro/steering 폴더의 steering 파일들을 최신 코드베이스 상태에 맞게 업데이트합니다.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "방금 작업이 완료되었습니다. 아래 두 가지를 검토하고 필요한 경우 업데이트해주세요:\n\n**변경사항 확인 방법**: `git status`와 `git diff`를 사용하여 커밋되지 않은 로컬 변경사항(unstaged + staged)을 먼저 확인하세요. 로컬 변경사항이 없는 경우에만 최근 커밋을 확인하세요.\n\n1. **README.md 업데이트**: `README.md`, `api/README.md`, `auth/README.md`, `event/README.md`, `event/api/README.md`, `event/web/README.md`, `jobs/README.md`, `jobs/ConferenceImporter/README.md`, `main/README.md`, `member/README.md`, `mobile/README.md`, `mobile/KIMSAPPLIB/README.md`, `mobile/KIMSMOBILEWEB/README.md`, `shared/README.md`, `vod/grpc/README.md`, `vod/web/README.md` 파일을 확인하고, 변경된 내용이 반영되어야 한다면 해당 섹션을 최신 상태로 업데이트해주세요.\n\n2. **Steering 파일 업데이트**: `.kiro/steering/` 폴더의 steering 파일들 (`dotnet-legacy.md`, `dotnet-modern.md`, `frontend-react.md`, `product.md`, `structure.md`, `tech.md`)을 확인하고, 변경사항으로 인해 프로젝트 구조, 기술 스택, 또는 제품 정보가 변경되었다면 해당 내용을 반영해주세요.\n\n변경이 필요 없다면 \"업데이트 불필요\"라고 알려주세요."
+  },
+  "workspaceFolderName": "KIMS-KIMSOnLine",
+  "shortName": "update-readme-and-steering"
+}
